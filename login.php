@@ -9,7 +9,8 @@
 <body>
     <div class="container">
         <h2>Login</h2>
-        <form action="process_login.php" method="post">
+        <form name="signupForm" action="process_signup.php" onsubmit="return validateForm()" method="POST">
+
             <input type="text" name="username" placeholder="Username" required>
             <input type="password" name="password" placeholder="Password" required>
             <button type="submit">Login</button>
