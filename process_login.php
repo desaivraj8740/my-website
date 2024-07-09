@@ -18,6 +18,7 @@ if ($result->num_rows > 0) {
     $sql = "INSERT INTO users (email, username, password) VALUES ('$email', '$username', '$hashed_password')";
     if ($conn->query($sql) === TRUE) {
         echo "Registration successful.";
+            header("Location: login.php");
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }

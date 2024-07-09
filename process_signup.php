@@ -37,7 +37,7 @@ if ($result->num_rows > 0) {
     if ($stmt->execute()) {
         echo "Registration successful.";
         // Optionally, redirect to login page
-        // header("Location: login.php");
+             header("Location: login.php");
     } else {
         echo "Error: " . $stmt->error;
     }
