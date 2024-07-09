@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>User Authentication</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form action="process_signup.php" method="post">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="login.php">Login here</a></p>
+    </div>
+
+    <script>
+        document.querySelector('input[name="password"]').addEventListener('input', function() {
+            var password = this.value;
+            var strength = document.getElementById('password-strength');
+            
+            if (!strength) {
+                strength = document.createElement('div');
+                strength.id = 'password-strength';
+                this.parentNode.insertBefore(strength, this.nextSibling);
+            }
+        
+            if (password.length < 6) {
+                strength.textContent = 'Weak';
+                strength.style.color = 'red';
+            } else if (password.length < 10) {
+                strength.textContent = 'Medium';
+                strength.style.color = 'orange';
+            } else {
+                strength.textContent = 'Strong';
+                strength.style.color = 'green';
+            }
+        });
+        </script>
+        
+
+</body>
+</html>
