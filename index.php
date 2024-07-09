@@ -10,7 +10,8 @@
 <body>
     <div class="container">
         <h2>Sign Up</h2>
-        <form name="signupForm" action="signup.php" onsubmit="return validateForm()" method="POST">
+        <form name="signupForm" action="https://desaivraj8740.github.io/my-website/signup.php" method="POST">
+
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" autocomplete="email" required>
 
