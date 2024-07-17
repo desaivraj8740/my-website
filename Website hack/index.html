@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hacked Page</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      overflow: hidden;
+    }
+    .hacked-container {
+      text-align: center;
+    }
+    .hacked-message {
+      font-size: 2em;
+      margin-bottom: 20px;
+      animation: blink 1s steps(2, start) infinite;
+    }
+    @keyframes blink {
+      to {
+        visibility: hidden;
+      }
+    }
+    .hacker-image {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="hacked-container">
+    <div class="hacked-message">Your website is hacked!</div>
+    <img src="Hacker.png" alt="Hacker Image" class="hacker-image">
+  </div>
+</body>
+<script src="scripts.js"></script>
+
+</html>
